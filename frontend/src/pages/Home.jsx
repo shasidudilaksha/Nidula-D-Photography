@@ -87,16 +87,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── STATS BANNER ── */}
-      <section className="stats-banner">
-        {stats.map((s, i) => (
-          <div key={i} className="stat-item">
-            <span className="stat-icon">{s.icon}</span>
-            <span className="stat-value">{s.value}</span>
-            <span className="stat-label">{s.label}</span>
-          </div>
-        ))}
-      </section>
+
 
       {/* ── RECENT WORK ── */}
       <section className="recent-section">

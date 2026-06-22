@@ -113,41 +113,6 @@
   50% { transform: translateX(-50%) translateY(8px); }
 }
 
-/* ── Stats Banner ── */
-.stats-banner {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.stat-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 2rem 1rem;
-  border-right: 1px solid var(--border);
-  transition: var(--transition);
-}
-.stat-item:last-child { border-right: none; }
-.stat-item:hover { background: var(--glass); }
-
-.stat-icon { color: var(--accent); }
-.stat-value {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-.stat-label {
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
 
 /* ── Recent Section ── */
 .recent-section {

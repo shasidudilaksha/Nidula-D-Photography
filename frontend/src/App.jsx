@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -8,11 +8,18 @@ import GalleryCategory from './pages/GalleryCategory';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Vlogs from './pages/Vlogs';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
 import './index.css';
 
-function App() {
+const ADMIN_PATHS = ['/admin/login', '/admin/dashboard'];
+
+function Layout() {
+  const location = useLocation();
+  const isAdmin = ADMIN_PATHS.some(path => location.pathname.startsWith(path));
+
   return (
-    <BrowserRouter>
+    <>
       <Toaster
         position="top-right"
         toastOptions={{
@@ -24,7 +31,7 @@ function App() {
           success: { iconTheme: { primary: '#c9a96e', secondary: '#0a0a0a' } },
         }}
       />
-      <Navbar />
+      {!isAdmin && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
@@ -32,8 +39,18 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/vlogs" element={<Vlogs />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
       </Routes>
-      <Footer />
+      {!isAdmin && <Footer />}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Layout />
     </BrowserRouter>
   );
 }

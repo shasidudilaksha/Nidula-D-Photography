@@ -142,3 +142,26 @@
 @media (max-width: 560px) {
   .gear-grid { grid-template-columns: 1fr; }
 }
+
+/* Admin Link */
+.admin-footer-link {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  background: var(--bg-primary);
+}
+.admin-subtle-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  transition: var(--transition);
+  opacity: 0.6;
+}
+.admin-subtle-link:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
