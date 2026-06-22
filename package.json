@@ -1,0 +1,15 @@
+{
+  "name": "nidula-d-photography",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install-all": "npm.cmd --prefix backend install && npm.cmd --prefix frontend install",
+    "backend": "npm.cmd --prefix backend start",
+    "frontend": "npm.cmd --prefix frontend start",
+    "dev": "concurrently \"npm.cmd --prefix backend start\" \"npm.cmd --prefix frontend start\"",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

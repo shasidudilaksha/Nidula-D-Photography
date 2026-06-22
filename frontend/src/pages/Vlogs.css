@@ -1,0 +1,113 @@
+.vlogs-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.yt-sub-btn {
+  margin-top: 2rem;
+  display: inline-flex;
+}
+
+/* Featured */
+.featured-vlog {
+  margin-bottom: 4rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.featured-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: 1.25rem 1.75rem 0;
+}
+.featured-embed {
+  position: relative;
+  padding-top: 56.25%;
+}
+.featured-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+}
+.featured-meta { padding: 1.5rem 1.75rem 1.75rem; }
+.featured-meta h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+/* Vlog Stats */
+.vlog-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.vlog-stats span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Grid */
+.vlogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.vlog-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.vlog-card:hover {
+  border-color: rgba(201,169,110,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.vlog-embed {
+  position: relative;
+  padding-top: 56.25%;
+}
+.vlog-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+}
+
+.vlog-info { padding: 1.25rem; }
+.vlog-tags { display: flex; gap: 0.4rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
+.vlog-tag {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.vlog-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) { .vlogs-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .vlogs-grid { grid-template-columns: 1fr; } }
